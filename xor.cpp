@@ -3,7 +3,7 @@
 int main(void) {
     unsigned char sh3llcode[] = "";
     
-    char pass[] = "secret";
+    char pass[] = "passwd";
     unsigned int data_len = sizeof(sh3llcode);
     unsigned int key_len = sizeof(pass) - 1; 
     
